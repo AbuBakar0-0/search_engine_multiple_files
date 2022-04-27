@@ -77,6 +77,7 @@ func main() {
 	lines := make(map[fileStruct]string)
 
 	for _, file := range files {
+
 		if filepath.Ext(file.Name()) == ".txt" {
 
 			//fmt.Println(file.Name(), filepath.Ext(file.Name()))
@@ -95,6 +96,7 @@ func main() {
 			}
 			lines[fileStruct{name: file.Name(), path: "./files/" + file.Name()}] += string(content) + "\n"
 		}
+
 	}
 	// for k, v := range lines {
 	// 	fmt.Println(k, " VALUE IS ", v)
