@@ -78,6 +78,7 @@ func main() {
 
 	for _, file := range files {
 		if filepath.Ext(file.Name()) == ".txt" {
+
 			//fmt.Println(file.Name(), filepath.Ext(file.Name()))
 			// _, error2 := os.Stat("./files/" + file.Name())
 
