@@ -73,7 +73,9 @@ func main() {
 		fmt.Println("ERROR FILE IS EMPTY")
 		log.Fatal(err)
 	}
+
 	lines := make(map[fileStruct]string)
+
 	for _, file := range files {
 		if filepath.Ext(file.Name()) == ".txt" {
 			//fmt.Println(file.Name(), filepath.Ext(file.Name()))
@@ -100,6 +102,7 @@ func main() {
 	//Step2 : Create Arrlines
 
 	arrlines := make(map[fileStruct][]string)
+
 	for k, v := range lines {
 		arrlines[k] = append(arrlines[k], strings.Split(v, "\n")...)
 	}
